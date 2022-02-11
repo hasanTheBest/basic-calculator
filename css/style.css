@@ -1,0 +1,54 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  text-align: center;
+}
+
+main {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* Display Area */
+.display-operand {
+  font-size: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+}
+
+.display-result {
+  font-size: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+}
+
+/* Calculator */
+.buttons-area {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.4rem;
+}
+
+.btn > button {
+  display: block;
+  height: 3rem;
+  width: 100%;
+  font-size: 1.5rem;
+}
+.btn-equal {
+  grid-row: 4 / 6;
+  grid-column: 5 / 6;
+}
+.btn-equal > button {
+  height: 6rem;
+}
+.btn-zero {
+  grid-column: span 2;
+}
+footer {
+  text-align: center;
+}
