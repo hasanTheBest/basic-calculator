@@ -71,10 +71,10 @@ function calculation(inputs) {
       operationResult = performOperation(inputs, inputs.indexOf("/"), "/");
     } else if (inputs.indexOf("*") > -1) {
       operationResult = performOperation(inputs, inputs.indexOf("*"), "*");
-    } else if (inputs.indexOf("+") > -1) {
-      operationResult = performOperation(inputs, inputs.indexOf("+"), "+");
-    } else {
+    } else if (inputs.indexOf("-") > -1) {
       operationResult = performOperation(inputs, inputs.indexOf("-"), "-");
+    } else {
+      operationResult = performOperation(inputs, inputs.indexOf("+"), "+");
     }
 
     return calculation(operationResult);
