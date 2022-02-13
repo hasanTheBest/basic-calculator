@@ -66,8 +66,9 @@ function calculation(inputs) {
     return inputs[0];
   } else {
     let operationResult;
-
-    if (inputs.indexOf("/") > -1) {
+    if (inputs.indexOf("%") > -1) {
+      operationResult = performOperation(inputs, inputs.indexOf("%"), "%");
+    } else if (inputs.indexOf("/") > -1) {
       operationResult = performOperation(inputs, inputs.indexOf("/"), "/");
     } else if (inputs.indexOf("*") > -1) {
       operationResult = performOperation(inputs, inputs.indexOf("*"), "*");
@@ -97,6 +98,9 @@ function performOperation(inputs, index, operator) {
     operatedInputs = [];
 
   switch (operator) {
+    case "%":
+      result = Number(prevInputs.pop()) % Number(nextInputs.shift());
+      break;
     case "/":
       result = Number(prevInputs.pop()) / Number(nextInputs.shift());
       break;
