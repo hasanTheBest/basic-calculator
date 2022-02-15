@@ -37,10 +37,7 @@ buttonArea.addEventListener("click", function (e) {
   // remove last entry
   if (id === "back" && displayOperandText !== "") {
     // remove last entry
-    displayOperand.innerText = displayOperandText.slice(
-      0,
-      displayOperandText.length - 1
-    );
+    displayOperand.innerText = displayOperandText.slice(0, -1);
 
     // if (inputAtSingle !== "") {
     //   console.log("inputAtSingle before", inputAtSingle);
@@ -52,6 +49,7 @@ buttonArea.addEventListener("click", function (e) {
   // remove all input
   if (id === "clear") {
     displayOperand.innerText = "";
+    displayResult.innerText = "";
     inputAtSingle = "";
     inputArr = [];
   }
